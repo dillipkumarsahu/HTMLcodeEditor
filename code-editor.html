@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+<title>
+code editor
+</title>
+<style>
+body{
+	padding:0;
+	margin:0;
+}
+header{
+	width:100%;
+	height:80px;
+	background-color:#FF4E00;
+	text-align:center;
+	padding:20px;
+	box-sizing:border-box;
+}
+#title{
+	padding:0;
+	margin:0;
+	color:white;
+	font-family:sans-serif;
+}
+fieldset{
+	width:575px;
+	height:582px;
+	float:left;
+	margin-left:50px;
+	margin-top:15px;
+	border:1px solid black;
+}
+legend{
+	font-family:century gothic;
+	font-size:20px;
+	font-weight:bold;
+}
+textarea{
+	width:100%;
+	height:95%;
+	border:none;
+	font-family:century gothic;
+	font-size:20px;
+}
+textarea:focus{
+	outline-style:none;
+}
+#result{
+	width:100%;
+	height:560px;
+	overflow:scroll;
+}
+#btn{
+	width:10%;
+	height:40px;
+	background:#FF4E00;
+	float:left;
+	position:fixed;
+	bottom:10px;
+	left:35.5%;
+	border-radius:4px;
+	box-shadow:0px 0px 5px 0px #323232;
+	cursor:pointer;
+}
+h3{
+	font-family:sans-serif;
+	margin-top:10px;
+	margin-left:3px;
+	color:white;
+}
+</style>
+</head>
+<body>
+<header>
+<h1 id="title">WAP TEXT EDITOR VER - 1.0</h1>
+</header>
+
+<fieldset>
+<legend>Type code here</legend>
+<textarea id="editer">
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+	</head>
+<body>
+
+<h1>Your code here....</h1>
+
+</body>
+</html>
+
+</textarea>
+</fieldset>
+
+<fieldset>
+<legend>Code result</legend>
+<div id="result">
+</div>
+</fieldset>
+<div id="btn" onclick="view()">
+<h3>Run code now</h3>
+</div>
+<script>
+function view()
+{
+	var textarea = document.getElementById("editer").value;
+	var viewer = document.getElementById("result");
+	viewer.innerHTML = textarea ;
+}
+</script>
+</body>
+</html>
